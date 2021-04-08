@@ -1,4 +1,7 @@
 import React from "react";
+import EntryForm from "./components/EntryForm/EntryForm";
+
+import "./App.css";
 
 export default class App extends React.Component {
   constructor() {
@@ -27,7 +30,8 @@ export default class App extends React.Component {
     return (
       <div>
         <h1>Shopping List</h1>
-        <p>{this.state.items.map(this.state.items())}</p>
+        <h2>{this.state.items.length}</h2>
+        <EntryForm />
       </div>
     );
   }
