@@ -4,7 +4,16 @@ export default class App extends React.Component {
   constructor() {
     super();
     this.state = {
-      items: [],
+      items: [
+        {
+          Apples: false,
+          amount: 2,
+        },
+        {
+          Bananas: true,
+          amount: 4,
+        },
+      ],
     };
   }
   render() {
