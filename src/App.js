@@ -1,9 +1,17 @@
 import React from "react";
 
-export default function App() {
-  return (
-    <main className="App">
-      <h1>{"Shopping List"}</h1>
-    </main>
-  );
+export default class App extends React.Component {
+  constructor() {
+    super();
+    this.state = {
+      items: [],
+    };
+  }
+  render() {
+    return (
+      <div>
+        <h1>Shopping List</h1>
+      </div>
+    );
+  }
 }
