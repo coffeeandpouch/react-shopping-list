@@ -6,12 +6,19 @@ export default class App extends React.Component {
     this.state = {
       items: [
         {
-          Apples: false,
+          tile: "Apples",
           amount: 2,
+          completed: false,
         },
         {
-          Bananas: true,
+          title: "Bananas",
           amount: 4,
+          completed: true,
+        },
+        {
+          title: "Oranges",
+          amount: 5,
+          completed: false,
         },
       ],
     };
@@ -20,6 +27,7 @@ export default class App extends React.Component {
     return (
       <div>
         <h1>Shopping List</h1>
+        <p>{this.state.items.map(this.state.items())}</p>
       </div>
     );
   }
