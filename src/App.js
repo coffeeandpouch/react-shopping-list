@@ -10,7 +10,7 @@ export default class App extends React.Component {
     this.state = {
       items: [
         {
-          tile: "Apples",
+          title: "Apples",
           completed: false,
         },
         {
