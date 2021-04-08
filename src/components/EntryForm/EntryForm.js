@@ -3,7 +3,7 @@ import React from "react";
 export default function AddItem(props) {
   return (
     <div className="addItem">
-      <form>
+      <form onSubmit={(e) => props.addEntry(e)}>
         <input
           type="text"
           name="item"
