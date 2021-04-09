@@ -28,7 +28,10 @@ export default class App extends React.Component {
   addEntry = (e) => {
     e.preventDefault();
     this.setState({
-      items: [...this.state.items, { title: e.target.value, completed: false }],
+      items: [
+        ...this.state.items,
+        { title: e.target.title.value, completed: false },
+      ],
     });
   };
 
@@ -38,12 +41,19 @@ export default class App extends React.Component {
     this.setState({ items });
   };
 
+  deleteItem = (e, index) => {
+    e.preventDefault();
+    e.stopPropagation();
+    let items = this.state.items.filter((item, i) => parseInt(index, 10) !== i);
+    this.setState({ items });
+  };
+
   render() {
     return (
       <div>
         <h1>Shopping List</h1>
         <h2>{this.state.items.length}</h2>
-        <EntryForm />
+        <EntryForm addEntry={this.addEntry} />
         <section className="items">
           {this.state.items.map((item, index) => (
             <Item

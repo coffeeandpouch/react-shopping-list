@@ -1,3 +1,7 @@
+* {
+  text-align: center;
+}
+
 .App {
   font-family: sans-serif;
   text-align: center;
@@ -5,6 +9,7 @@
 
 .items {
   display: flex;
+  flex-direction: column;
   justify-content: space-around;
   flex-wrap: wrap;
 }
@@ -18,5 +23,15 @@
 }
 
 .Item.complete {
-  background-color: darkgrey;
+  background-color: lightgreen;
+}
+
+.Item.del {
+  position: absolute;
+  top: -2px;
+  right: 3px;
+  text-decoration: none;
+  color: red;
+  font-family: sans-serif;
+  font-size: 20px;
 }

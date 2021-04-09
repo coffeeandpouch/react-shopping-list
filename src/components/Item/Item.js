@@ -7,6 +7,13 @@ export default function Item(props) {
       onClick={(e) => props.toggleComplete(props.index)}
     >
       <p>{props.item.title}</p>
+      <a
+        href="/deleteItem"
+        className="del"
+        onClick={(e) => props.deleteItem(e, props.index)}
+      >
+        X
+      </a>
     </div>
   );
 }
